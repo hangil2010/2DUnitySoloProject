@@ -12,17 +12,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target;
     private int pathIndex = 0;
-    /// <summary>
-    /// Start is called on the frame when a script is enabled just before
-    /// any of the Update methods is called the first time.
-    /// </summary>
-    private void Start()
-    {
-        target = LevelManager.main.path[pathIndex];
-    }
-    /// <summary>
-    /// Update is called every frame, if the MonoBehaviour is enabled.
-    /// </summary>
+    private void Start() => target = LevelManager.main.path[pathIndex];
     private void Update()
     {
         if (Vector2.Distance(target.position, transform.position) <= nextPointDistiance)

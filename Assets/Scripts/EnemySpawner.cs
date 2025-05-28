@@ -29,14 +29,8 @@ public class EnemySpawner : MonoBehaviour
     /// any of the Update methods is called the first time.
     /// </summary>
 
-    private void Awake()
-    {
-        OnEnemyDestoryed.AddListener(EnemyDestoryed);
-    }
-    private void Start()
-    {
-        StartCoroutine(StartWave());
-    }
+    private void Awake() => OnEnemyDestoryed.AddListener(EnemyDestoryed);
+    private void Start() => StartCoroutine(StartWave());
     private void Update()
     {
         if (!isSpawning) return;
@@ -57,10 +51,7 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    private void EnemyDestoryed()
-    {
-        enemiesAlive--;
-    }
+    private void EnemyDestoryed() => enemiesAlive--;
 
     private IEnumerator StartWave()
     {
@@ -82,8 +73,5 @@ public class EnemySpawner : MonoBehaviour
         GameObject prefabToSpawn = enemyPrefabs[0];
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
-    private int EnemiesPerWave()
-    {
-        return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor));
-    }
+    private int EnemiesPerWave() => Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor));
 }
