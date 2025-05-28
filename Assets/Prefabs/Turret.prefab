@@ -250,11 +250,11 @@ MonoBehaviour:
   rotatePoint: {fileID: 1641598556560375420}
   enemyMask:
     serializedVersion: 2
-    m_Bits: 0
-  bulletPrefab: {fileID: 0}
-  firingPoint: {fileID: 0}
+    m_Bits: 1024
+  bulletPrefab: {fileID: 8707489584695770387, guid: 9da6f30e28ccb614586c1a35f2db3461, type: 3}
+  firingPoint: {fileID: 4527212010203617659}
   targetRange: 5
-  rotationSpeed: 5
+  rotationSpeed: 200
   bulletPerSecond: 1
 --- !u!1 &5322604620725556319
 GameObject:
