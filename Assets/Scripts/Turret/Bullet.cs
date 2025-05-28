@@ -23,6 +23,7 @@ public class Bullet : MonoBehaviour
         rigid.velocity = direction * bulletSpeed;
     }
 
+    // Bullet, Enemy 레이어를 추가하고 Project Settings에서 Bullet과 Enemy만 충돌하게 설정
     private void OnCollisionEnter2D(Collision2D other)
     {
         other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
