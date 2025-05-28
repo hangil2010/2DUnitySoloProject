@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2570428124569378483}
   - component: {fileID: 2540115034023397311}
   - component: {fileID: 3402960863120128434}
-  - component: {fileID: -3294446961684687593}
+  - component: {fileID: 2718333156699943152}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
@@ -165,7 +165,7 @@ MonoBehaviour:
   rigid: {fileID: 2570428124569378483}
   nextPointDistiance: 0.1
   moveSpeed: 2
---- !u!114 &-3294446961684687593
+--- !u!114 &2718333156699943152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -177,3 +177,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f380709a2cdacd04a98e4132d5c1e262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoints: 2
+  coinAmount: 50
