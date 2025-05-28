@@ -7,11 +7,16 @@ public class Turret : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform rotatePoint;
     [SerializeField] private LayerMask enemyMask;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
     // Start is called before the first frame update
     [Header("Atteribute")]
     [SerializeField] private float targetRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private float bulletPerSecond = 1f;
+
     private Transform target;
+    private float timeUntilFire;
 
     private void Update()
     {
@@ -21,11 +26,29 @@ public class Turret : MonoBehaviour
             rotatePoint.rotation = Quaternion.RotateTowards(rotatePoint.rotation, Quaternion.Euler(new Vector3(0f, 0f, 0f)), rotationSpeed * Time.deltaTime);
             return;
         }
+
         RotateToTarget();
+
         if (!CheckTargetIsInRange())
         {
             target = null;
         }
+        else
+        {
+            timeUntilFire += Time.deltaTime;
+
+            if (timeUntilFire >= 1f / bulletPerSecond)
+            {
+                Shoot();
+                timeUntilFire = 0f;
+            }
+        }
+    }
+    private void Shoot()
+    {
+        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        Bullet bullet = bulletObj.GetComponent<Bullet>();
+        bullet.SetTarget(target);
     }
     private void FindTarget()
     {
