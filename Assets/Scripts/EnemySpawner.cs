@@ -50,6 +50,8 @@ public class EnemySpawner : MonoBehaviour
             EndWave();
         }
     }
+    private void OnDisable() => OnEnemyDestoryed.RemoveListener(EnemyDestoryed);
+
 
     private void EnemyDestoryed() => enemiesAlive--;
 
