@@ -6,6 +6,7 @@ public class Menu : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] TextMeshProUGUI currencyUI;
+    [SerializeField] TextMeshProUGUI currentMonsterCountUI;
     [SerializeField] Animator animator;
 
     private bool isMenuOpen = true;
@@ -19,6 +20,8 @@ public class Menu : MonoBehaviour
         isMenuOpen = !isMenuOpen;
         animator.SetBool("MenuOpen", isMenuOpen);   
     }
+
+
 
     public void SetTower()
     {
