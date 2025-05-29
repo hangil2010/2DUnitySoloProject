@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
         hitPoints -= dmg;
         if (hitPoints <= 0 && !isDestoryed)
         {
-            EnemySpawner.OnEnemyDestoryed?.Invoke();
+            SpawnManager.OnEnemyDestroyed?.Invoke();
             LevelManager.main.IncreaseCurrency(coinAmount);
             isDestoryed = true;
             Destroy(gameObject);
