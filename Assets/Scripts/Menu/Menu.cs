@@ -13,6 +13,7 @@ public class Menu : MonoBehaviour
     private void OnGUI()
     {
         currencyUI.text = LevelManager.main.currency.ToString();
+        currentMonsterCountUI.text = SpawnManager.main.currentWaveSpawnEnemyCount.ToString();
     }
 
     public void ToggleMenu()
