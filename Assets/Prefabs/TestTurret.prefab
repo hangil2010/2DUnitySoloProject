@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6415094, g: 0.32378072, b: 0.32378072, a: 1}
+  m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -158,7 +158,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.81327486, g: 0.8584906, b: 0.31990921, a: 1}
+  m_Color: {r: 0.91169155, g: 0.9150943, b: 0.876246, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 2781254937812455973}
   - component: {fileID: -4396304958945523721}
   m_Layer: 9
-  m_Name: Turret
+  m_Name: TestTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,9 +253,9 @@ MonoBehaviour:
     m_Bits: 1024
   bulletPrefab: {fileID: 8707489584695770387, guid: 9da6f30e28ccb614586c1a35f2db3461, type: 3}
   firingPoint: {fileID: 4527212010203617659}
-  targetRange: 5
+  targetRange: 10
   rotationSpeed: 200
-  bulletPerSecond: 1
+  bulletPerSecond: 0.5
 --- !u!1 &5322604620725556319
 GameObject:
   m_ObjectHideFlags: 0
