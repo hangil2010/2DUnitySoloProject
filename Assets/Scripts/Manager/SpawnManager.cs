@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
 
     public int currentWave = 1;
     public int enemiesAlive = 0;
-
+    public int enemiesKilled = 0;
     public int currentWaveSpawnEnemyCount = 0;
     private int enemiesLeftToSpawn = 0;
     private float timeSinceLastSpawn = 0f;
@@ -62,6 +62,7 @@ public class SpawnManager : MonoBehaviour
         isSpawning = true;
         enemiesLeftToSpawn = EnemiesPerWave();
         currentWaveSpawnEnemyCount = enemiesLeftToSpawn;
+        enemiesKilled = 0;
         yield return new WaitForSeconds(timeBetweenWaves);
     }
 
