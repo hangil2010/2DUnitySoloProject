@@ -19,8 +19,16 @@ public class Bullet : MonoBehaviour
     private void FixedUpdate()
     {
         if (!target) return;
+        RotateToTarget(target.position);
         Vector2 direction = (target.position - transform.position).normalized;
         rigid.velocity = direction * bulletSpeed;
+    }
+
+    private void RotateToTarget(Vector3 targetPos)
+    {
+        Vector3 direction = targetPos - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle - 90f);
     }
 
     // Bullet, Enemy 레이어를 추가하고 Project Settings에서 Bullet과 Enemy만 충돌하게 설정
