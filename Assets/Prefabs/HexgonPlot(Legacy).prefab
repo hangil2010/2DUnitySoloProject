@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4437115546285087212}
   - component: {fileID: 7137383982641389063}
   m_Layer: 0
-  m_Name: HexgonPlot
+  m_Name: HexgonPlot(Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

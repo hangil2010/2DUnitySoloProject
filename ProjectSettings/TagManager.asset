@@ -20,10 +20,10 @@ TagManager:
   - Background
   - Ground
   - Path
+  - Plots
   - Turret
   - Enemy
   - Bullet
-  - HighLight
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 2593291163
+    locked: 0
+  - name: Plots
+    uniqueID: 1852016493
     locked: 0
   - name: Path
     uniqueID: 3117840863
