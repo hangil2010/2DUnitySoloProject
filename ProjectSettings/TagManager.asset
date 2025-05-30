@@ -7,6 +7,9 @@ TagManager:
   - Background
   - Ground
   - Path
+  - PanelParameter
+  - EditableButton
+  - ButtonParameter
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Turret
   - Enemy
   - Bullet
-  - 
+  - HighLight
   - 
   - 
   - 
@@ -43,4 +46,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 2792055019
+    locked: 0
+  - name: Ground
+    uniqueID: 2593291163
+    locked: 0
+  - name: Path
+    uniqueID: 3117840863
+    locked: 0
+  - name: HighLight
+    uniqueID: 446668865
+    locked: 0
+  - name: Turret
+    uniqueID: 4060703533
+    locked: 0
+  - name: Enemy
+    uniqueID: 2860768895
+    locked: 0
+  - name: Bullet
+    uniqueID: 4170145467
     locked: 0
