@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class TitleSceneManager : MonoBehaviour
 {
-    public Animator transition;
-    public float transitionTime = 1f;
+    [SerializeField] private Animator transition;
+    [SerializeField] private float transitionTime = 1f;
     public void ChangeScene(string sceneName)
     {
         StartCoroutine(LoadLevel(sceneName));
