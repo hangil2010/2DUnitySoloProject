@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rigid;
+    [SerializeField] private GameObject hitEffect;
 
     [Header("Atteributes")]
     [SerializeField] private float bulletSpeed = 5f;
@@ -36,5 +37,6 @@ public class Bullet : MonoBehaviour
     {
         other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
         Destroy(gameObject);
+        Instantiate(hitEffect, transform.position, Quaternion.Euler(transform.rotation.x,transform.rotation.y,transform.rotation.z + 90f));
     }
 }

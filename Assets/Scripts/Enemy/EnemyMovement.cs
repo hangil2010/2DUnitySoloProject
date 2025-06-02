@@ -10,9 +10,15 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float nextPointDistiance = 0.1f;
     [SerializeField] private float moveSpeed = 2f;
 
+    private float baseSpeed;
     private Transform target;
     private int pathIndex = 0;
-    private void Start() => target = LevelManager.main.path[pathIndex];
+    private void Start()
+    {
+        target = LevelManager.main.path[pathIndex];
+        baseSpeed = moveSpeed;
+    }
+
     private void Update()
     {
         if (Vector2.Distance(target.position, transform.position) <= nextPointDistiance)
@@ -35,5 +41,15 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector2 direction = (target.position - transform.position).normalized;
         rigid.velocity = direction * moveSpeed;
+    }
+
+    public void SetSpeed(float speed)
+    {
+        moveSpeed = speed;
+    }
+
+    public void ResetSpeed()
+    {
+        moveSpeed = baseSpeed;
     }
 }
