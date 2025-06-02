@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be5e0c30c959c94785f8187dfbf137b, type: 3}
+  m_Name: UFO
+  m_EditorClassIdentifier: 
+  enemyName: UFO
+  enemyPrefab: {fileID: 5644568864061602595, guid: 275c189dc491e8d4daea671dcd6084e9, type: 3}
+  spawnWeight: 0.9
