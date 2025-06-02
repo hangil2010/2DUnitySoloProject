@@ -5,7 +5,6 @@ using UnityEditor;
 public class AreaTurret : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform rotatePoint;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject AreaEffectPrefab;
     
