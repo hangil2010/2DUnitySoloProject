@@ -39880,7 +39880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6183062328481338960, guid: 8c03b8885643b4f4ca1dea59abf8276a, type: 3}
       propertyPath: towers.Array.data[2].cost
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6183062328481338960, guid: 8c03b8885643b4f4ca1dea59abf8276a, type: 3}
       propertyPath: towers.Array.data[2].name
@@ -39888,7 +39888,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6183062328481338960, guid: 8c03b8885643b4f4ca1dea59abf8276a, type: 3}
       propertyPath: towers.Array.data[3].cost
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6183062328481338960, guid: 8c03b8885643b4f4ca1dea59abf8276a, type: 3}
       propertyPath: towers.Array.data[3].name
