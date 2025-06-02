@@ -25,8 +25,4 @@ public class Menu : MonoBehaviour
         isMenuOpen = !isMenuOpen;
         animator.SetBool("MenuOpen", isMenuOpen);   
     }
-    public void SetTower()
-    {
-
-    }
 }
