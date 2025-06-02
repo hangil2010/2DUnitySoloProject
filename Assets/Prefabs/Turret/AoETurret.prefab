@@ -51,7 +51,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 2048
-  AreaEffectPrefab: {fileID: 195608, guid: 24e29d528f11acf42974643bee14a607, type: 3}
+  AreaEffectPrefab: {fileID: 119634, guid: 8d2980ba5e59f33419a0275c1ec29e38, type: 3}
   targetRange: 2.5
   bulletPerSecond: 0.5
   damage: 1
