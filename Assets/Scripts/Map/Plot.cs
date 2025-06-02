@@ -14,17 +14,19 @@ public class Plot : MonoBehaviour
     private void Start() => startColor = spriteRenderer.color;
     private void OnMouseEnter()
     {
+        if (LevelManager.main.isPaused == true) return;
         spriteRenderer.color = hoverColor;
     }
 
     private void OnMouseExit()
     {
+        if (LevelManager.main.isPaused == true) return;
         spriteRenderer.color = startColor;
     }
 
     private void OnMouseDown()
     {
-        if (tower != null) return;
+        if (LevelManager.main.isPaused == true || tower != null) return;
 
         Tower towerBuild = BuildManager.main.GetSelectedTower();
 
