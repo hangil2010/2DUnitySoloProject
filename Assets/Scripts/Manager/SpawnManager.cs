@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,14 +14,18 @@ public class SpawnManager : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] public int baseEnemies = 8;
     [SerializeField] public float timeBetweenWaves = 5f;
-    [SerializeField] public float enemiesPerSecond = 1f;
+    [SerializeField] public float enemiesSpawnPerSecond = 1f;
     [SerializeField] private float difficultyScalingFactor = 0.75f;
-
+    [SerializeField] private float enemiesPerSecondCap = 10f;
+    [Header("UI References")]
     public int currentWave = 1;
     public int enemiesAlive = 0;
     public int enemiesKilled = 0;
     public int currentWaveSpawnEnemyCount = 0;
+
+
     private int enemiesLeftToSpawn = 0;
+    private float enemiesPerSecond;
     private float timeSinceLastSpawn = 0f;
     private bool isSpawning = false;
 
@@ -61,8 +66,10 @@ public class SpawnManager : MonoBehaviour
     {
         isSpawning = true;
         enemiesLeftToSpawn = EnemiesPerWave();
+        enemiesPerSecond = EnemiesPerSecond();
         currentWaveSpawnEnemyCount = enemiesLeftToSpawn;
         enemiesKilled = 0;
+        
         yield return new WaitForSeconds(timeBetweenWaves);
     }
 
@@ -77,5 +84,10 @@ public class SpawnManager : MonoBehaviour
     private int EnemiesPerWave()
     {
         return Mathf.RoundToInt(baseEnemies * Mathf.Pow(currentWave, difficultyScalingFactor));
+    }
+
+    private float EnemiesPerSecond()
+    {
+        return Math.Clamp(enemiesSpawnPerSecond * Mathf.Pow(currentWave, difficultyScalingFactor), 0f, enemiesPerSecondCap);
     }
 }
