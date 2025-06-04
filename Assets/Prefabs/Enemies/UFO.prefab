@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f380709a2cdacd04a98e4132d5c1e262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 2
+  hitPoints: 3
   coinAmount: 50
 --- !u!95 &8250795269265065502
 Animator:

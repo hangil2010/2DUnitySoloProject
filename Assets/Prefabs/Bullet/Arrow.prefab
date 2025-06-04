@@ -164,4 +164,4 @@ MonoBehaviour:
   rigid: {fileID: 6670112182635277136}
   hitEffect: {fileID: 157776, guid: 82bf03917e16d3d4cad30518cca28308, type: 3}
   bulletSpeed: 5
-  bulletDamage: 1
+  bulletDamage: 2
