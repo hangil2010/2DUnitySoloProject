@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     public Transform[] path;
     [SerializeField] private TextMeshProUGUI pauseButtonText;
     [SerializeField] private Image pauseImage;
+    [SerializeField] AudioSource BGM;
     [Header("Atteributes")]
     public int currency;
     
@@ -45,6 +46,8 @@ public class LevelManager : MonoBehaviour
         float _timeScale = isPaused ? 0f : 1f;
         Time.timeScale = _timeScale;
         pauseButtonText.text = pauseText;
+        if (isPaused) BGM.Pause();
+        else BGM.UnPause();
         pauseImage.gameObject.SetActive(isPaused);
     }
 }
